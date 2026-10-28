@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp1.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="660" Width="520"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Background="#F5F5F5">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#2C3E50">
+            <TextBlock Text="Регистрация"
+                       Foreground="White" FontFamily="Times New Roman"
+                       FontSize="18" FontWeight="Bold"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+
+        <StackPanel Grid.Row="1" Margin="40,20,40,20">
+
+            <TextBlock Text="Фамилия:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtFamiliya" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Имя:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtImya" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Отчество:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtOtchestvo" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Логин:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtLogin" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Пароль:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <PasswordBox x:Name="txtParol" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Телефон:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtTelefon" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Email:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtEmail" Height="28" Margin="0,0,0,10"/>
+
+            <TextBlock Text="Адрес:" FontFamily="Times New Roman" FontSize="13" Margin="0,0,0,3"/>
+            <TextBox x:Name="txtAdres" Height="28" Margin="0,0,0,15"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnSave" Content="Зарегистрироваться" Width="180" Height="40"
+                        Style="{StaticResource PrimaryButton}"
+                        Margin="0,0,15,0" Click="BtnSave_Click"/>
+                <Button x:Name="btnCancel" Content="Отмена" Width="130" Height="40"
+                        Style="{StaticResource SecondaryButton}"
+                        Click="BtnCancel_Click"/>
+            </StackPanel>
+
+            <TextBlock x:Name="txtStatus" Text=""
+                       FontFamily="Times New Roman" FontSize="12"
+                       Foreground="#E74C3C"
+                       HorizontalAlignment="Center"
+                       Margin="0,12,0,0" TextWrapping="Wrap"/>
+        </StackPanel>
+    </Grid>
+</Window>
